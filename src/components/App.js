@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import ServicesLayout from "./service-page/Services.page";
-import HomeLayout from "./home-page/Home.page";
-import ComMenu from "./common/ComMenu";
+import ServicesLayout from './service-page/Services.page';
+import HomeLayout from './home-page/Home.page';
+import ComMenu from './meta-bar/ComMenu';
+
+import { Wrapper, Page } from './App.styles';
+import SiteHeader from './header/SiteHeader';
+import LangMenu from './meta-bar/LangMenu';
+import MetaBar from './meta-bar/MetaBar';
 
 class App extends Component {
 	constructor (props) {
@@ -16,12 +21,16 @@ class App extends Component {
 	render () {
 		return (
 			<BrowserRouter>
-				<div className="App">
+				<Wrapper>
+					<Page>
+						<MetaBar/>
+						<SiteHeader/>
+					
 					CHEN V2 - local state
-					<ComMenu/>
-					<Route exact path='/' component={HomeLayout} />
+\					<Route exact path='/' component={HomeLayout} />
 					<Route path='/services' component={ServicesLayout}/>
-				</div>
+					</Page>
+				</Wrapper>
 			</BrowserRouter>
 				
 		);

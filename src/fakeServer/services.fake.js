@@ -32,15 +32,15 @@ const randomLength = (range, min) => {
 
 const headerMaker = () => {
 	return {
-		'en': `${heading()}`,
-		'es': `ES ${heading()}`
+		'english': `${heading()}`,
+		'spanish': `ES ${heading()}`
 	}
 };
 
 const paragraphMaker = () => {
 	return {
-		'en': `${paragraph()}`,
-		'es': `ES ${paragraph()}`
+		'english': `${paragraph()}`,
+		'spanish': `ES ${paragraph()}`
 	}
 };
 

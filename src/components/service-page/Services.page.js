@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
 import { servicesAPI } from '../../fakeServer/api.fake';
-import { Text } from "../../providers/language-provider";
+import ServiceList from './ServiceList';
+import withPageLayout from '../common/withPageLayout';
 
-class ServicesLayout extends Component {
+class Services extends Component {
 	
 	constructor ( props ) {
 		super (props);
@@ -46,10 +47,10 @@ class ServicesLayout extends Component {
 			return <p>Loading ...</p>
 		}
 		
-		return <ul>
-			{ list.map( service => <li key={service.id}><Text textObj={service.header}/></li> )}
-		</ul>
+		return <ServiceList list={list}/>
 	}
 }
+
+const ServicesLayout = withPageLayout(Services);
 
 export default ServicesLayout;

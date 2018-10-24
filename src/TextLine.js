@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LanguageContext } from "./components/App";
+import { LanguageContext } from './components/App';
 
 const TextLine = ( {textObj} ) => {
 	return <LanguageContext.Consumer>
