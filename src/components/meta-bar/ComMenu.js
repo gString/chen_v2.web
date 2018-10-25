@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { Btn, Menu } from './ComMenu.styles';
+import { getText, Text } from "../../providers/language-provider";
+import UI from '../../providers/ui-text-provider';
 
 const sendEmail = () => console.log("Send email btn clicked");
 const goLinkdin = () => console.log("goLinkdin btn clicked");
@@ -8,20 +10,20 @@ const goLinkdin = () => console.log("goLinkdin btn clicked");
 const ComMenu = () =>
 	<Menu>
 		<li>
-			<Btn title='Click to send an email to Yuval Chen'
+			<Btn title={ getText(UI.COMMENU.EMAIL) }
 				 onClick={sendEmail}
 				 id="email">
-				Send an e-mail
+				<Text textObj={UI.COMMENU.EMAILBTN}/>
 			</Btn>
 		</li>
 		<li>
-			<Btn title='Click to open Yuval Chen LinkedIn profile'
+			<Btn title={ getText(UI.COMMENU.LINKEDIN) }
 				 onClick={goLinkdin}
 				 id='linkedin'>
-				Yuval Chen Profile at LinkedIn
+				<Text textObj={UI.COMMENU.LINKEDINBTN}/>
 			</Btn>
 		</li>
-	</Menu>
+	</Menu>;
 
 
 export default ComMenu;

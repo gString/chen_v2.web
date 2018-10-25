@@ -1,7 +1,11 @@
 import React from 'react';
 
-const Logo = () => <a>
-	<img alt='Yuval Chen - Arid land crop specialist' src='../../images/logo.png'/>
-</a>;
+import UI from '../../providers/ui-text-provider';
+import { getText } from "../../providers/language-provider";
+
+const Logo = () =>
+	<a title={ getText(UI.LOGOLINK) } href='http://www.yuvalchen.com'>
+		<img alt={ getText(UI.LOGO) } src='../../images/logo.png'/>
+	</a>;
 
 export default Logo;

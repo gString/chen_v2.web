@@ -1,3 +1,8 @@
+import UI from "./ui-text-provider";
+
+
+export const availableLanguages = UI.LANGAGUES;
+/*
 export const availableLanguages = {
 	english: {
 		id: 0,
@@ -24,14 +29,15 @@ export const availableLanguages = {
 		}
 	}
 };
+*/
 
 
 let language = 'english';
 
 export const getSelected = () => language;
-export const setSelected = id => {
-	console.log("set, id:", id);
-	language = availableLanguages[id]
+export const setSelected = lang => {
+	console.log("set, id:", lang);
+	language = availableLanguages[lang].LANG;
 };
 
 export const getText = ( textObj ) => textObj[ language ] || '- -';

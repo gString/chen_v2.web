@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App/> should match the snapshot 1`] = `
+<BrowserRouter>
+  <div
+    className='App'
+  >
+    CHEN V2 - local state
+    <ComMenu />
+    <Route
+      component={[Function]}
+      exact={true}
+      path='/'
+    />
+    <Route
+      component={[Function]}
+      path='/services'
+    />
+  </div>
+</BrowserRouter>
+`;
